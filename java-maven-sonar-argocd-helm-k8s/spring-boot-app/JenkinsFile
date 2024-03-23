@@ -9,8 +9,8 @@ pipeline {
     stage('Checkout') {
       steps {
         sh 'echo passed'
-        git branch: 'main', url: 'https://github.com/VinodVulavakayala/Jenkins-Zero-To-Hero.git'
-        sh 'sudo chmod -R 775 Jenkins-Zero-To-Hero'
+       // git branch: 'main', url: 'https://github.com/VinodVulavakayala/Jenkins-Zero-To-Hero.git'
+        //sh 'sudo chmod -R 775 Jenkins-Zero-To-Hero'
       }
     }
     stage('Build and Test') {
@@ -54,7 +54,7 @@ pipeline {
         steps {
             withCredentials([string(credentialsId: 'github', variable: 'GITHUB_TOKEN')]) {
                 sh '''
-                    git config --global --unset credential.helper
+                   # git config --global --unset credential.helper
                     git config user.email "vinoddevopscloud99@gmail.com"
                     git config user.name "vinod v"
                     BUILD_NUMBER=${BUILD_NUMBER}
