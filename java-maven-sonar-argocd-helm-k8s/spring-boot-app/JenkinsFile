@@ -10,6 +10,7 @@ pipeline {
       steps {
         sh 'echo passed'
         git branch: 'main', url: 'https://github.com/VinodVulavakayala/Jenkins-Zero-To-Hero.git'
+        sh 'sudo chmod -R 775 Jenkins-Zero-To-Hero'
       }
     }
     stage('Build and Test') {
