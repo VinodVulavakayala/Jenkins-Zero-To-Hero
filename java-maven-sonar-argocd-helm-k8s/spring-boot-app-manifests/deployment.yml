@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
       - name: spring-boot-app
-        image: vinoddevopscloud99/springboot:5
+        image: vinoddevopscloud99/springboot:12
         ports:
         - containerPort: 8080
